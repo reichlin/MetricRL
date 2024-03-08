@@ -1,0 +1,104 @@
+---
+algorithms:
+  0: "MetricRL"
+  1: "DDPG"
+  2: "BC"
+  3: "CQL"
+  4: "BCQ"
+  5: "BEAR"
+  6: "PLAS"
+  7: "IQL"
+  8: "ContrastiveRL"
+  9: "QuasiMetric"
+EPOCHS: 100
+batches_per_epoch: 500 #1000
+batch_size: 256
+gamma: 0.95
+d4rl:
+  reward_norm: 0
+  exploration_processes:
+    0: "Random"
+    1: "Ornstein-Uhlenbeck"
+    2: "Minari"
+  experiments:
+    0:
+      name: "point_uMaze"
+      minari_name: "pointmaze-umaze-v1"
+      gym_name: "PointMaze_UMaze-v3"
+      state_dim: 4
+      goal_dim: 2
+      action_dim: 2
+    1:
+      name: "point_Medium"
+      minari_name: "pointmaze-medium-v1"
+      gym_name: "PointMaze_Medium_Diverse_GR-v3"
+      state_dim: 4
+      goal_dim: 2
+      action_dim: 2
+    2:
+      name: "point_Large"
+      minari_name: "pointmaze-large-v1"
+      gym_name: "PointMaze_Large_Diverse_GR-v3"
+      state_dim: 4
+      goal_dim: 2
+      action_dim: 2
+fetch:
+  reward_norm: 1
+  experiments:
+    0:
+      name: "fetch_Reach"
+      gym_name: "FetchReachDense-v2"
+      sim_name: "FetchReach-v2"
+      state_dim: 10
+      goal_dim: 3
+      action_dim: 4
+    1:
+      name: "fetch_Push"
+      gym_name: "FetchPushDense-v2"
+      sim_name: "FetchPush-v2"
+      state_dim: 25
+      goal_dim: 3
+      action_dim: 4
+hyperMaze:
+  reward_norm: 0
+miniGrid:
+  reward_norm: 0
+  experiments:
+    0:
+      name: "open_goal"
+      state_dim: 2
+      goal_dim: 2
+      action_dim: 4
+    1:
+      name: "key_door_goal"
+      state_dim: 5
+      goal_dim: 5
+      action_dim: 6
+...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
